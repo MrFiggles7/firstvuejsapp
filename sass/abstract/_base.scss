@@ -1,0 +1,25 @@
+.v-application{
+  font-family: 'Neucha' !important;
+}
+body{
+  font-family: 'Neucha' !important;
+}
+
+.text{
+  font-family: 'Neucha' !important;
+}
+
+#app{
+  font-family: 'Neucha' !important;
+}
+
+.activeTabItem{
+
+}
+
+
+.v-window-x-transition-enter-active, .v-window-x-transition-leave-active, .v-window-x-reverse-transition-enter-active, .v-window-x-reverse-transition-leave-active, .v-window-y-transition-enter-active, .v-window-y-transition-leave-active, .v-window-y-reverse-transition-enter-active, .v-window-y-reverse-transition-leave-active{
+  .v-image{
+    visibility: hidden;
+  }
+}

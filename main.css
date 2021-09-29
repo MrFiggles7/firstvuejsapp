@@ -1,0 +1,37 @@
+.v-application {
+  font-family: 'Neucha' !important; }
+
+body {
+  font-family: 'Neucha' !important; }
+
+.text {
+  font-family: 'Neucha' !important; }
+
+#app {
+  font-family: 'Neucha' !important; }
+
+.v-window-x-transition-enter-active .v-image, .v-window-x-transition-leave-active .v-image, .v-window-x-reverse-transition-enter-active .v-image, .v-window-x-reverse-transition-leave-active .v-image, .v-window-y-transition-enter-active .v-image, .v-window-y-transition-leave-active .v-image, .v-window-y-reverse-transition-enter-active .v-image, .v-window-y-reverse-transition-leave-active .v-image {
+  visibility: hidden; }
+
+.tab-text {
+  font-size: 1.7rem; }
+
+.v-card__title {
+  font-size: 1.8rem; }
+
+.v-card__subtitle {
+  font-size: 1.2rem; }
+
+.v-card__text {
+  font-size: 1rem; }
+
+.basil {
+  background-color: #FFFBE6 !important; }
+
+.header--text {
+  color: #356859 !important;
+  font-family: 'Neucha' !important;
+  font-weight: 900;
+  font-size: 4rem; }
+
+/*# sourceMappingURL=main.css.map */
