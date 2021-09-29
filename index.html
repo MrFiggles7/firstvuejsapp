@@ -70,7 +70,7 @@
             </v-tabs-items>
         </div>
 
-        <template v-show="!showPage">
+        <div v-show="!showPage">
 
             <v-card class="container">
                 <v-card
@@ -81,7 +81,6 @@
                     <v-col
                         cols="4"
                         v-for="item in item.list"
-                        v-if="item.qty > 0"
                         :key="item"
                     >
                         <v-card class="container">
@@ -150,7 +149,7 @@
             </v-card>
 
 
-        </template>
+        </div>
 
     </v-app>
 </div>
