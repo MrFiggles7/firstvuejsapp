@@ -13,7 +13,7 @@ Vue.component('item-page', {
 
     },
 
-    template: `<v-row class="mt-5 mb-5" style="background-color: transparent">
+    template: `<v-row class="mt-5 mb-5 ml-3 mr-3" style="background-color: transparent">
 <v-col v-for="item in list"
     :key="title"
     cols="12"
