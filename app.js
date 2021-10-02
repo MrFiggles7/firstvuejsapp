@@ -20,9 +20,7 @@ var app = new Vue({
         showPage: true,
 
         shoppingCart: [
-            {
 
-            }
         ],
 
         items: [
@@ -316,7 +314,30 @@ var app = new Vue({
     },
 
     methods:{
+        addToShoppingCart: function (item) {
+            for(var i = 0; i < this.shoppingCart.length; i++){
 
+                if(this.shoppingCart[i] == item){
+                    item.qty++;
+                    return true;
+                }
+            }
+            this.shoppingCart.push(item);
+        },
+
+        removeFromShoppingCart: function (item) {
+            if(item.qty > 0){
+                item.qty--;
+            }
+            else{
+                this.shoppingCart.splice(this.shoppingCart.indexOf(item), 1);
+            }
+        },
+
+        trashItem: function (item) {
+            item.qty = 0;
+            this.shoppingCart.splice(this.shoppingCart.indexOf(item), 1);
+        }
     }
 
 })

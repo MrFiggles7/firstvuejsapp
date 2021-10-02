@@ -25,6 +25,21 @@ body {
 .v-card__text {
   font-size: 1rem; }
 
+.v-application .text-h1, .v-application .text-lg-h1, .v-application .text-md-h1 {
+  font-family: 'Neucha' !important; }
+
+.v-application .text-h2, .v-application .text-sm-h1 {
+  font-family: 'Neucha' !important; }
+
+.v-application .text-h4, .v-application .text-lg-h4 {
+  font-family: 'Neucha' !important; }
+
+.v-application .text-h5, .v-application .text-md-h5 {
+  font-family: 'Neucha' !important; }
+
+.v-application .text-h6, .v-application .text-sm-h6 {
+  font-family: 'Neucha' !important; }
+
 .basil {
   background-color: #FFFBE6 !important; }
 

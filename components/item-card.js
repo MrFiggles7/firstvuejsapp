@@ -1,26 +1,28 @@
 Vue.component('item-card', {
     props: {
-        image: String,
-        title: String,
-        price: Number,
-        description: String,
+        item : Object,
         show: false,
-        qty: 0
     },
+
 
     methods: {
-
+        addToShoppingCart : function(){
+            this.$emit('add-me', this.item);
+        }
     },
 
 
-    computed: {},
+    computed: {
+
+    },
 
     template: `<v-card
     class="mx-auto"
+    hover
     max-width="400"
   >
     <v-img        
-        :src="image"
+        :src="item.image"
         height="350px"         
     ></v-img>
 
@@ -29,11 +31,11 @@ Vue.component('item-card', {
         cols="9"
     >
     <v-card-title style="word-break: break-word">
-      {{title}}
+      {{item.title}}
     </v-card-title>
 
     <v-card-subtitle>
-      {{'$' + price.toFixed(2)}}
+      {{'$' + item.price.toFixed(2)}}
     </v-card-subtitle>
 </v-col>
     
@@ -42,7 +44,7 @@ Vue.component('item-card', {
         cols="2"
         class="d-flex align-center justify-start" 
     >
-    {{qty}}
+    {{item.qty}}
     <v-btn
         class="mx-2 text-right"
         fab
@@ -50,7 +52,7 @@ Vue.component('item-card', {
         small
         color="primary"
     >
-        <v-icon @click="qty = qty+1">
+        <v-icon @click="addToShoppingCart()">
             add_shopping_cart
         </v-icon>
     </v-btn>
@@ -83,7 +85,7 @@ Vue.component('item-card', {
         <v-divider></v-divider>
 
         <v-card-text>
-          {{description}}
+          {{item.description}}
         </v-card-text>
       </div>
     </v-expand-transition>

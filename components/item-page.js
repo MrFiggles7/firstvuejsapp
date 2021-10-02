@@ -5,7 +5,9 @@ Vue.component('item-page', {
         },
     },
     methods: {
-
+        addToShoppingCart: function (item) {
+            this.$emit('add-me', item);
+        }
     },
 
 
@@ -20,9 +22,10 @@ Vue.component('item-page', {
     lg="3"
     md="4"
     sm="6"
+     
     >
     
-    <item-card :title="item.title" :price="item.price" :image="item.image" :description="item.description" :qty="item.qty"></item-card>
+    <item-card :item="item" @add-me="addToShoppingCart(item)"></item-card>
 </v-col>
 </v-row>
   `,
