@@ -41,17 +41,20 @@ Vue.component('shopping-cart__page', {
     },
 
     template: `
-        <v-container class="container" color="basil">
+        <v-container-fluid color="basil">
                     <v-card-title class="text-h2">
                         Your Cart:
                     </v-card-title>
                 <v-row
-                    
+                    no-gutters
                 >
                     <v-col
-                        cols="8"                        
+                    class="mb-15"
+                        cols="12"
+                        md="8"                        
                     >
                         <v-row
+                        class="mt-0 ml-lg-5 ml-md-4 ml-sm-1 mx-2"
                                 v-for="item in list"
                                 :key="item">
                             <shopping-cart-item :item="item" @add-me="addToShoppingCart"
@@ -62,30 +65,17 @@ Vue.component('shopping-cart__page', {
                              </shopping-cart-item>
                         </v-row>
 
-                    </v-col>
-                    <v-col>
-                        <v-container>
-                            <v-card-text
-                                v-for="item in list"
-                            >
-                               {{item.title}} -- {{'QTY: ' + item.qty + ' x $' + item.price + ' = $' + (item.qty * item.price).toFixed(2)}}
-                            </v-card-text>
-                            <v-card-subtitle class="text-h4">
-                                {{'Subtotal: $' + subTotal.toFixed(2)}}
-                            </v-card-subtitle>
-                            <v-card-text>
-                                {{'x Tax (5.5%): $' + taxAmount.toFixed(2)}}
-                            </v-card-text>
-                            <v-card-title class="text-h2">
-                                Total: {{'$' + total.toFixed(2)}}
-                            </v-card-title>
-                            <v-btn x-large color="#356859" class="white--text ml-5 mt-5">Continue to Payment</v-btn>
-                        </v-container>
+                    </v-col>                                        
+                    <v-col                                    
+                        cols="12"
+                        md="4"
+                    >
+                        <shopping-cart__total :list="list"></shopping-cart__total>
                     </v-col>
 
 
                 </v-row>
 
-            </v-container>
+            </v-container-fluid>
     `,
 });

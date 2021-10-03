@@ -23,20 +23,28 @@ Vue.component('shopping-cart-item', {
 
     template: `
        <v-card
-                                    class="container mb-1"
+                                    class="container mb-6"
                                     outlined
                                     hover
                             >
-                                <v-card class="d-inline">
+                                <v-card class="d-inline">                                    
                                     <v-row>
                                         <v-col
+                                            cols="4"
                                         >
+                                            <v-img :src="item.image" min-height="200px" max-height="300px"></v-img>
+                                        </v-col>
+                                        <v-col
+                                            cols="8"
+                                        >
+                                        <v-row>
+                                        <v-col>                                        
                                             <v-card-title style="word-break: break-word">
                                                 {{item.title}}
                                             </v-card-title>
 
                                             <v-card-subtitle>
-                                                {{'$' + item.price.toFixed(2)}}
+                                                {{'$' + item.price.toFixed(2)  + ' x ' + item.qty}}
                                             </v-card-subtitle>
                                         </v-col>
 
@@ -44,7 +52,7 @@ Vue.component('shopping-cart-item', {
                                         <v-col
                                                 class="d-flex align-center justify-end"
                                         >
-                                            <v-card class="pa-5 mr-5">{{'QTY: ' + item.qty + ' x $' + item.price + ' = $' + (item.qty * item.price).toFixed(2)}}</v-card>
+                                            <v-card class="pa-5 mr-5 d-none d-lg-block">{{'QTY: ' + item.qty + ' x $' + item.price + ' = $' + (item.qty * item.price).toFixed(2)}}</v-card>
                                             <v-btn
                                                     class="mx-2 text-right"
                                                     fab
@@ -90,6 +98,10 @@ Vue.component('shopping-cart-item', {
                                                 {{item.description}}
                                             </v-card-text>
                                         </div>
+                                        </v-col>
+                                        </v-row>
+                                        
+                                        
 
                                     </v-row>
                                 </v-card>
