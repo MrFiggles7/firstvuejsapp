@@ -302,14 +302,6 @@ var app = new Vue({
                 ]
             },
         ],
-        text: 'Lorem ipsum dolor sit amet,' +
-            ' consectetur adipiscing elit,' +
-            ' sed do eiusmod tempor incididunt' +
-            ' ut labore et dolore magna aliqua.' +
-            ' Ut enim ad minim veniam, quis nostrud' +
-            ' exercitation ullamco laboris nisi ut aliquip' +
-            ' ex ea commodo consequat.',
-
 
     },
 
@@ -326,7 +318,7 @@ var app = new Vue({
         },
 
         removeFromShoppingCart: function (item) {
-            if(item.qty > 0){
+            if(item.qty > 1){
                 item.qty--;
             }
             else{
