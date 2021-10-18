@@ -51,8 +51,9 @@ Vue.component('item-card', {
         dark
         small
         color="primary"
+        @click="addToShoppingCart()"
     >
-        <v-icon @click="addToShoppingCart()">
+        <v-icon >
             add_shopping_cart
         </v-icon>
     </v-btn>
