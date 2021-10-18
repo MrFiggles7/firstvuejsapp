@@ -1,7 +1,7 @@
 Vue.component('item-page', {
     props: {
         list: {
-            type: Array
+            type: Object
         },
     },
     methods: {

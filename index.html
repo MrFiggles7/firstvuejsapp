@@ -10,8 +10,6 @@
     <link href="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css" rel="stylesheet">
     <link rel="stylesheet" href="main.css">
 
-
-
 </head>
 <body>
 <div id="app">
@@ -50,10 +48,10 @@
             >
                 <v-tab
                         class="text-lg-h4 text-md-h5 text-sm-h6 pa-sm-0 ma-sm-0 pa-0 ma-0"
-                        v-for="item in items"
+                        v-for="item in productList"
                         :key="item"
                 >
-                    {{item.name}}
+                    {{item.title}}
                 </v-tab>
             </v-tabs>
 
@@ -63,11 +61,11 @@
             >
                 <v-card color="basil" class="fill-height">
                     <v-tab-item
-                            v-for="item in items"
+                            v-for="item in productList"
                             :key="item"
 
                     >
-                        <item-page :list="item.list" @add-me="addToShoppingCart"></item-page>
+                        <item-page :list="item" @add-me="addToShoppingCart"></item-page>
                     </v-tab-item>
                 </v-card>
             </v-tabs-items>
@@ -91,13 +89,23 @@
 </div>
 <script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js"></script>
+
+<script src="models/ItemList.js"></script>
+<script src="models/Product.js"></script>
+<script src="models/PotPlanter.js"></script>
+<script src="models/OutdoorPlant.js"></script>
+<script src="models/IndoorPlant.js"></script>
+<script src="models/CactiSucculent.js"></script>
+<script src="models/ProductList.js"></script>
+
 <script src="components/item-page.js"></script>
 <script src="components/item-card.js"></script>
 <script src="components/shopping-cart__total.js"></script>
 <script src="components/shopping-cart-item.js"></script>
 <script src="components/shopping-cart__page.js"></script>
-
 <script src="components/oopsie-page.js"></script>
+
+
 <script src="app.js"></script>
 </body>
 </html>
