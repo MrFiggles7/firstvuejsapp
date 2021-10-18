@@ -11,7 +11,6 @@ Vue.component('shopping-cart__total', {
 
     computed: {
         subTotal: function(){
-
             var subtotal = 0;
 
             for(var i = 0; i < this.list.length; i++){

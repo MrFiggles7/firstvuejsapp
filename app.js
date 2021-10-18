@@ -221,6 +221,7 @@ var app = new Vue({
                     return true;
                 }
             }
+            item.qty++;
             this.shoppingCart.push(item);
         },
 
